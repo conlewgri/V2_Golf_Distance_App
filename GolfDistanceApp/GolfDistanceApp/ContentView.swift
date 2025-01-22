@@ -12,7 +12,15 @@ import MetaWearablesSDK
 
 // Location Manager for GPS data
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+    static public let sharedInstance = LocationManager()
     private let locationManager = CLLocationManager()
+
+    @Published var greenLocation: CLLocationCoordinate2D?
+    @Published var bunkerLocation: CLLocationCoordinate2D?
+    @Published var distanceToGreen: Double?
+    @Published var distanceToBunker: Double?
+    @Published var isGreenSet: Bool = false
+    @Published var isBunkerSet: Bool = false
     @Published var userLocation: CLLocation?
     @Published var region: MKCoordinateRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
@@ -33,6 +41,38 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         userLocation = location
         region.center = location.coordinate
     }
+    
+    func calculateDistances() {
+        if let userLoc = userLocation {
+            calculateDistances(userLocation: userLoc.coordinate)
+        }
+    }
+    
+    func calculateDistances(userLocation: CLLocationCoordinate2D) {
+        let userCLLocation = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
+
+        // Calculate distance to green
+        if let greenLocation = greenLocation {
+            let greenCLLocation = CLLocation(latitude: greenLocation.latitude, longitude: greenLocation.longitude)
+            let distanceInMeters = userCLLocation.distance(from: greenCLLocation)
+            distanceToGreen = distanceInMeters * 1.09361 // Convert to yards
+        }
+
+        // Calculate distance to bunker
+        if let bunkerLocation = bunkerLocation {
+            let bunkerCLLocation = CLLocation(latitude: bunkerLocation.latitude, longitude: bunkerLocation.longitude)
+            let distanceInMeters = userCLLocation.distance(from: bunkerCLLocation)
+            distanceToBunker = distanceInMeters * 1.09361 // Convert to yards
+        }
+
+        // Push data to Pantry
+        if let distanceToGreen = distanceToGreen, let distanceToBunker = distanceToBunker {
+            let pantryManager = PantryManager()
+            pantryManager.sendGolfData(distanceToGreen: distanceToGreen, distanceToBunker: distanceToBunker)
+        }
+    }
+
+    
 }
 
 // Pantry Manager for handling Pantry API requests
@@ -90,15 +130,9 @@ struct Wind: Codable {
 }
 
 struct ContentView: View {
-    @EnvironmentObject var locationManager: LocationManager
+    @StateObject var locationManager = LocationManager.sharedInstance
     @StateObject private var weatherManager = WeatherManager()
-    @State private var greenLocation: CLLocationCoordinate2D?
-    @State private var bunkerLocation: CLLocationCoordinate2D?
-    @State private var userLocationStored: CLLocationCoordinate2D?
-    @State private var distanceToGreen: Double?
-    @State private var distanceToBunker: Double?
-    @State private var isGreenSet: Bool = false
-    @State private var isBunkerSet: Bool = false
+
     @State private var showConnectionAlert = false
     @State private var url: URL?
     @State private var deviceManager = MWSDKDeviceManager.sharedInstance()
@@ -138,9 +172,7 @@ struct ContentView: View {
                     
                     Text("Your Location: \(userLocation.coordinate.latitude), \(userLocation.coordinate.longitude)")
                         .font(.caption)
-                    
-                   // userLocationStored = userLocation.coordinate
-                
+                                    
                     // Fetch weather data when location is available
                     Button("Get Weather Data") {
                         weatherManager.fetchWeather(for: userLocation.coordinate)
@@ -148,40 +180,38 @@ struct ContentView: View {
                     .padding()
 
                     // Set Green Location
-                    if !isGreenSet {
+                    if !locationManager.isGreenSet {
                         Button("Set Current Location as Green") {
-                            greenLocation = userLocation.coordinate
-                            isGreenSet = true
+                            locationManager.greenLocation = userLocation.coordinate
+                            locationManager.isGreenSet = true
                         }
                         .padding()
                     }
 
                     // Set Bunker Location
-                    if isGreenSet && !isBunkerSet {
+                    if locationManager.isGreenSet && !locationManager.isBunkerSet {
                         Button("Set Current Location as Bunker") {
-                            bunkerLocation = userLocation.coordinate
-                            isBunkerSet = true
+                            locationManager.bunkerLocation = userLocation.coordinate
+                            locationManager.isBunkerSet = true
                         }
                         .padding()
                     }
 
                     // Calculate Distances and Push to Pantry
-                    if isGreenSet && isBunkerSet {
+                    if locationManager.isGreenSet && locationManager.isBunkerSet {
                         Button("Calculate and Send Distances") {
-                            if let userLocationCurrent = locationManager.userLocation {
-                                calculateDistances(userLocation: userLocation.coordinate)
-                            }
+                            locationManager.calculateDistances()
                         }
                         .padding()
 
                         VStack(spacing: 10) {
-                            if let distance = distanceToGreen {
+                            if let distance = locationManager.distanceToGreen {
                                 Text("Distance to Green: \(String(format: "%.2f", distance)) yards")
                                     .font(.headline)
                                     .foregroundColor(.green)
                             }
 
-                            if let distance = distanceToBunker {
+                            if let distance = locationManager.distanceToBunker {
                                 Text("Distance to Bunker: \(String(format: "%.2f", distance)) yards")
                                     .font(.headline)
                                     .foregroundColor(.orange)
@@ -245,43 +275,13 @@ struct ContentView: View {
         }
     }
 
-    public func calculateAllDistances() {
-        if let userLoc = userLocationStored {
-            calculateDistances(userLocation: userLoc)
-        }
-    }
-    
-    private func calculateDistances(userLocation: CLLocationCoordinate2D) {
-        let userCLLocation = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
-
-        // Calculate distance to green
-        if let greenLocation = greenLocation {
-            let greenCLLocation = CLLocation(latitude: greenLocation.latitude, longitude: greenLocation.longitude)
-            let distanceInMeters = userCLLocation.distance(from: greenCLLocation)
-            distanceToGreen = distanceInMeters * 1.09361 // Convert to yards
-        }
-
-        // Calculate distance to bunker
-        if let bunkerLocation = bunkerLocation {
-            let bunkerCLLocation = CLLocation(latitude: bunkerLocation.latitude, longitude: bunkerLocation.longitude)
-            let distanceInMeters = userCLLocation.distance(from: bunkerCLLocation)
-            distanceToBunker = distanceInMeters * 1.09361 // Convert to yards
-        }
-
-        // Push data to Pantry
-        if let distanceToGreen = distanceToGreen, let distanceToBunker = distanceToBunker {
-            let pantryManager = PantryManager()
-            pantryManager.sendGolfData(distanceToGreen: distanceToGreen, distanceToBunker: distanceToBunker)
-        }
-    }
-
     private func resetLocations() {
-        greenLocation = nil
-        bunkerLocation = nil
-        distanceToGreen = nil
-        distanceToBunker = nil
-        isGreenSet = false
-        isBunkerSet = false
+        locationManager.greenLocation = nil
+        locationManager.bunkerLocation = nil
+        locationManager.distanceToGreen = nil
+        locationManager.distanceToBunker = nil
+        locationManager.isGreenSet = false
+        locationManager.isBunkerSet = false
     }
 
     private func mapAnnotations() -> [MapAnnotation] {
@@ -289,10 +289,10 @@ struct ContentView: View {
         if let userLocation = locationManager.userLocation {
             annotations.append(MapAnnotation(name: "User", coordinate: userLocation.coordinate))
         }
-        if let greenLocation = greenLocation {
+        if let greenLocation = locationManager.greenLocation {
             annotations.append(MapAnnotation(name: "Green", coordinate: greenLocation))
         }
-        if let bunkerLocation = bunkerLocation {
+        if let bunkerLocation = locationManager.bunkerLocation {
             annotations.append(MapAnnotation(name: "Bunker", coordinate: bunkerLocation))
         }
         return annotations

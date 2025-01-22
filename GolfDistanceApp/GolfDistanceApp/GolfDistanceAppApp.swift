@@ -8,12 +8,11 @@ import MetaWearablesSDK
 
 @main
 struct GolfDistanceApp: App {
-    @StateObject private var locationManager = LocationManager() // Initialize the LocationManager here
     @State private var impl = GolfDeviceManager.sharedInstance
     @State private var deviceManager = MWSDKDeviceManager.sharedInstance()
 
     init() {
-      deviceManager.setKeychainAccessGroup("8Y9CW4W2BY.conlewgri.GolfDistanceApp")
+      deviceManager.setKeychainAccessGroup("T84QZS65DQ.conlewgri.GolfDistanceApp")
       deviceManager.add(impl)
       deviceManager.start()
     }
@@ -21,7 +20,6 @@ struct GolfDistanceApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(locationManager)
         }
     }
 }

@@ -88,8 +88,8 @@ extension GolfDeviceManager: MWSDKAIActionsDelegate {
     if let data = payload.data(using: .utf8) {
       do {
         let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-          ContentView().calculateAllDistances()
-        aiAction.sendResponse("{\"result_code\":\"success\"}")
+          LocationManager.sharedInstance.calculateDistances()
+          aiAction.sendResponse("{\"result_code\":\"success\"}")
       } catch {
         NSLog("Error handling aiAction response")
       }
