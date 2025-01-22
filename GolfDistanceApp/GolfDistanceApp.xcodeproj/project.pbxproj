@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1271DB92D3D6260005917FE /* MetaWearablesSDK in Frameworks */ = {isa = PBXBuildFile; productRef = B1271DB82D3D6260005917FE /* MetaWearablesSDK */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B13F7F4D2D3BB4D6009685F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B13F7F332D3BB4D5009685F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B13F7F3A2D3BB4D5009685F0;
+			remoteInfo = GolfDistanceApp;
+		};
+		B13F7F572D3BB4D6009685F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B13F7F332D3BB4D5009685F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B13F7F3A2D3BB4D5009685F0;
+			remoteInfo = GolfDistanceApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B13F7F3B2D3BB4D5009685F0 /* GolfDistanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GolfDistanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B13F7F4C2D3BB4D6009685F0 /* GolfDistanceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GolfDistanceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B13F7F562D3BB4D6009685F0 /* GolfDistanceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GolfDistanceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B13F7F6A2D3BB63F009685F0 /* Exceptions for "GolfDistanceApp" folder in "GolfDistanceApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B13F7F3A2D3BB4D5009685F0 /* GolfDistanceApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B13F7F3D2D3BB4D5009685F0 /* GolfDistanceApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B13F7F6A2D3BB63F009685F0 /* Exceptions for "GolfDistanceApp" folder in "GolfDistanceApp" target */,
+			);
+			path = GolfDistanceApp;
+			sourceTree = "<group>";
+		};
+		B13F7F4F2D3BB4D6009685F0 /* GolfDistanceAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GolfDistanceAppTests;
+			sourceTree = "<group>";
+		};
+		B13F7F592D3BB4D6009685F0 /* GolfDistanceAppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GolfDistanceAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B13F7F382D3BB4D5009685F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1271DB92D3D6260005917FE /* MetaWearablesSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B13F7F492D3BB4D6009685F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B13F7F532D3BB4D6009685F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B13F7F322D3BB4D5009685F0 = {
+			isa = PBXGroup;
+			children = (
+				B13F7F3D2D3BB4D5009685F0 /* GolfDistanceApp */,
+				B13F7F4F2D3BB4D6009685F0 /* GolfDistanceAppTests */,
+				B13F7F592D3BB4D6009685F0 /* GolfDistanceAppUITests */,
+				B13F7F3C2D3BB4D5009685F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B13F7F3C2D3BB4D5009685F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B13F7F3B2D3BB4D5009685F0 /* GolfDistanceApp.app */,
+				B13F7F4C2D3BB4D6009685F0 /* GolfDistanceAppTests.xctest */,
+				B13F7F562D3BB4D6009685F0 /* GolfDistanceAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B13F7F3A2D3BB4D5009685F0 /* GolfDistanceApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B13F7F602D3BB4D6009685F0 /* Build configuration list for PBXNativeTarget "GolfDistanceApp" */;
+			buildPhases = (
+				B13F7F372D3BB4D5009685F0 /* Sources */,
+				B13F7F382D3BB4D5009685F0 /* Frameworks */,
+				B13F7F392D3BB4D5009685F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B13F7F3D2D3BB4D5009685F0 /* GolfDistanceApp */,
+			);
+			name = GolfDistanceApp;
+			packageProductDependencies = (
+				B1271DB82D3D6260005917FE /* MetaWearablesSDK */,
+			);
+			productName = GolfDistanceApp;
+			productReference = B13F7F3B2D3BB4D5009685F0 /* GolfDistanceApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B13F7F4B2D3BB4D6009685F0 /* GolfDistanceAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B13F7F632D3BB4D6009685F0 /* Build configuration list for PBXNativeTarget "GolfDistanceAppTests" */;
+			buildPhases = (
+				B13F7F482D3BB4D6009685F0 /* Sources */,
+				B13F7F492D3BB4D6009685F0 /* Frameworks */,
+				B13F7F4A2D3BB4D6009685F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B13F7F4E2D3BB4D6009685F0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B13F7F4F2D3BB4D6009685F0 /* GolfDistanceAppTests */,
+			);
+			name = GolfDistanceAppTests;
+			packageProductDependencies = (
+			);
+			productName = GolfDistanceAppTests;
+			productReference = B13F7F4C2D3BB4D6009685F0 /* GolfDistanceAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B13F7F552D3BB4D6009685F0 /* GolfDistanceAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B13F7F662D3BB4D6009685F0 /* Build configuration list for PBXNativeTarget "GolfDistanceAppUITests" */;
+			buildPhases = (
+				B13F7F522D3BB4D6009685F0 /* Sources */,
+				B13F7F532D3BB4D6009685F0 /* Frameworks */,
+				B13F7F542D3BB4D6009685F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B13F7F582D3BB4D6009685F0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B13F7F592D3BB4D6009685F0 /* GolfDistanceAppUITests */,
+			);
+			name = GolfDistanceAppUITests;
+			packageProductDependencies = (
+			);
+			productName = GolfDistanceAppUITests;
+			productReference = B13F7F562D3BB4D6009685F0 /* GolfDistanceAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B13F7F332D3BB4D5009685F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					B13F7F3A2D3BB4D5009685F0 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					B13F7F4B2D3BB4D6009685F0 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = B13F7F3A2D3BB4D5009685F0;
+					};
+					B13F7F552D3BB4D6009685F0 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = B13F7F3A2D3BB4D5009685F0;
+					};
+				};
+			};
+			buildConfigurationList = B13F7F362D3BB4D5009685F0 /* Build configuration list for PBXProject "GolfDistanceApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B13F7F322D3BB4D5009685F0;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B1271DB72D3D6260005917FE /* XCRemoteSwiftPackageReference "meta-wearables-mobile-sdk-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B13F7F3C2D3BB4D5009685F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B13F7F3A2D3BB4D5009685F0 /* GolfDistanceApp */,
+				B13F7F4B2D3BB4D6009685F0 /* GolfDistanceAppTests */,
+				B13F7F552D3BB4D6009685F0 /* GolfDistanceAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B13F7F392D3BB4D5009685F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B13F7F4A2D3BB4D6009685F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B13F7F542D3BB4D6009685F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B13F7F372D3BB4D5009685F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B13F7F482D3BB4D6009685F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B13F7F522D3BB4D6009685F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B13F7F4E2D3BB4D6009685F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B13F7F3A2D3BB4D5009685F0 /* GolfDistanceApp */;
+			targetProxy = B13F7F4D2D3BB4D6009685F0 /* PBXContainerItemProxy */;
+		};
+		B13F7F582D3BB4D6009685F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B13F7F3A2D3BB4D5009685F0 /* GolfDistanceApp */;
+			targetProxy = B13F7F572D3BB4D6009685F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B13F7F5E2D3BB4D6009685F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B13F7F5F2D3BB4D6009685F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B13F7F612D3BB4D6009685F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GolfDistanceApp/GolfDistanceApp.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GolfDistanceApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8Y9CW4W2BY;
+				"DEVELOPMENT_TEAM[sdk=xros*]" = 8Y9CW4W2BY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GolfDistanceApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need access to your location to calculate distances on the golf course.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = conlewgri.GolfDistanceApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Conor's Wildcard Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=xros*]" = "Conor's Wildcard Profile";
+				REGISTER_APP_GROUPS = NO;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		B13F7F622D3BB4D6009685F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GolfDistanceApp/GolfDistanceApp.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GolfDistanceApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8Y9CW4W2BY;
+				"DEVELOPMENT_TEAM[sdk=xros*]" = 8Y9CW4W2BY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GolfDistanceApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need access to your location to calculate distances on the golf course.";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = conlewgri.GolfDistanceApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Conor's Wildcard Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=xros*]" = "Conor's Wildcard Profile";
+				REGISTER_APP_GROUPS = NO;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		B13F7F642D3BB4D6009685F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Y9CW4W2BY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = conlewgri.GolfDistanceAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GolfDistanceApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GolfDistanceApp";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		B13F7F652D3BB4D6009685F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Y9CW4W2BY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = conlewgri.GolfDistanceAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GolfDistanceApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GolfDistanceApp";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		B13F7F672D3BB4D6009685F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Y9CW4W2BY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = conlewgri.GolfDistanceAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = GolfDistanceApp;
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		B13F7F682D3BB4D6009685F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Y9CW4W2BY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = conlewgri.GolfDistanceAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = GolfDistanceApp;
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B13F7F362D3BB4D5009685F0 /* Build configuration list for PBXProject "GolfDistanceApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B13F7F5E2D3BB4D6009685F0 /* Debug */,
+				B13F7F5F2D3BB4D6009685F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B13F7F602D3BB4D6009685F0 /* Build configuration list for PBXNativeTarget "GolfDistanceApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B13F7F612D3BB4D6009685F0 /* Debug */,
+				B13F7F622D3BB4D6009685F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B13F7F632D3BB4D6009685F0 /* Build configuration list for PBXNativeTarget "GolfDistanceAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B13F7F642D3BB4D6009685F0 /* Debug */,
+				B13F7F652D3BB4D6009685F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B13F7F662D3BB4D6009685F0 /* Build configuration list for PBXNativeTarget "GolfDistanceAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B13F7F672D3BB4D6009685F0 /* Debug */,
+				B13F7F682D3BB4D6009685F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1271DB72D3D6260005917FE /* XCRemoteSwiftPackageReference "meta-wearables-mobile-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facebookincubator/meta-wearables-mobile-sdk-ios.git";
+			requirement = {
+				branch = v8.0.0.2.0;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B1271DB82D3D6260005917FE /* MetaWearablesSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1271DB72D3D6260005917FE /* XCRemoteSwiftPackageReference "meta-wearables-mobile-sdk-ios" */;
+			productName = MetaWearablesSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B13F7F332D3BB4D5009685F0 /* Project object */;
+}

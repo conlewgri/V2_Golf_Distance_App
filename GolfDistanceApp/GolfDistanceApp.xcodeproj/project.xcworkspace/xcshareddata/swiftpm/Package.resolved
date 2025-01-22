@@ -1,0 +1,15 @@
+{
+  "originHash" : "4b0a8cc618985a4fc5f16735c258c45cbf993df47b2812ce7626aa1499356038",
+  "pins" : [
+    {
+      "identity" : "meta-wearables-mobile-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:facebookincubator/meta-wearables-mobile-sdk-ios.git",
+      "state" : {
+        "branch" : "v8.0.0.2.0",
+        "revision" : "ba1fe723a6f9bbc92daf1e4766116a53e062f611"
+      }
+    }
+  ],
+  "version" : 3
+}
