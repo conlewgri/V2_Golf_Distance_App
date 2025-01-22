@@ -12,7 +12,7 @@ struct GolfDistanceApp: App {
     @State private var deviceManager = MWSDKDeviceManager.sharedInstance()
 
     init() {
-      deviceManager.setKeychainAccessGroup("T84QZS65DQ.conlewgri.GolfDistanceApp")
+      deviceManager.setKeychainAccessGroup("8Y9CW4W2BY.conlewgri.GolfDistanceApp")
       deviceManager.add(impl)
       deviceManager.start()
     }
