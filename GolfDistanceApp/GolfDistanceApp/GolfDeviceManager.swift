@@ -87,7 +87,7 @@ extension GolfDeviceManager: MWSDKAIActionsDelegate {
     // This will generate code you can copy into your Xcode project.
     if let data = payload.data(using: .utf8) {
       do {
-        let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+          _ = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
           LocationManager.sharedInstance.calculateDistances()
           aiAction.sendResponse("{\"result_code\":\"success\"}")
       } catch {
