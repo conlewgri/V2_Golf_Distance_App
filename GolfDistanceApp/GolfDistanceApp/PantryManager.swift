@@ -10,7 +10,7 @@ import Foundation
 class PantryManager {
     private let pantryURL = "https://getpantry.cloud/apiv1/pantry/c740f18f-e27d-4c8e-ba62-60625bdda031/basket/golf_distance"
 
-    func sendGolfData(golfDistances: [[String: Any]]) {
+    func sendGolfData(golfDistances: [String]) {
         guard let url = URL(string: pantryURL) else {
             print("Invalid Pantry URL")
             return
@@ -18,9 +18,11 @@ class PantryManager {
 
         let clubs = loadClubDistances()
 
+        let clubsMap = clubs.map { $0.name + ": " + String($0.distance) }
+        
         let golfData: [String: Any] = [
-            "golfDistances": golfDistances,
-            "clubDistances": clubs.map { ["name": $0.name, "distance": $0.distance] },
+            "golfDistances": golfDistances.joined(separator: ", "),
+            "clubDistances": clubsMap.joined(separator: ", "),
             "timestamp": ISO8601DateFormatter().string(from: Date())
         ]
 

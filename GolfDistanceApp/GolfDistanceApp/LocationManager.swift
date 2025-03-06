@@ -157,7 +157,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     func calculateDistances(userLocation: CLLocationCoordinate2D) {
         let userCLLocation = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
-        var allDistances: [[String: Any]] = []
+        var allDistances: [String] = []
 
         for hole in golfCourse {
             let distances = [
@@ -170,11 +170,12 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 let greenCLLocation = CLLocation(latitude: greenLocation.latitude, longitude: greenLocation.longitude)
                 let distanceInYards = userCLLocation.distance(from: greenCLLocation) * 1.09361 // Convert meters to yards
 
-                allDistances.append([
-                    "hole": hole.holeNumber,
-                    "location": locationType,
-                    "distance": distanceInYards
-                ])
+                allDistances.append(
+                    "{ hole: " + String(hole.holeNumber)
+                    + ", location: " + locationType
+                    + ", distance: " + String(format: "%.2f", distanceInYards)
+                    + "}"
+                )
             }
         }
 
