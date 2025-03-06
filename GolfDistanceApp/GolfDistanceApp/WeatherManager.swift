@@ -9,11 +9,11 @@ import Foundation
 import CoreLocation
 
 class WeatherManager: ObservableObject {
-    @Published var windSpeed: Double? // Wind speed in meters/second
-    @Published var windDirection: Double? // Wind direction in degrees
+    @Published var windSpeed: Double?  // Wind speed in meters/second
+    @Published var windDirection: Double?  // Wind direction in degrees
     
-    private let apiKey = "1a1bca075f3cf177b8f7fbae7da15a34"
-    
+    private let apiKey = "1a1bca075f3cf177b8f7fbae7da15a34"  // Replace with your actual API key
+
     func fetchWeather(for location: CLLocationCoordinate2D) {
         let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(location.latitude)&lon=\(location.longitude)&units=metric&appid=\(apiKey)"
         guard let url = URL(string: urlString) else { return }
@@ -34,3 +34,12 @@ class WeatherManager: ObservableObject {
     }
 }
 
+// Struct to decode OpenWeatherMap API response
+struct WeatherResponse: Codable {
+    let wind: Wind
+}
+
+struct Wind: Codable {
+    let speed: Double
+    let deg: Double
+}

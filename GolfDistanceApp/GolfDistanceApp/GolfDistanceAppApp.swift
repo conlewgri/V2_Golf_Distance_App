@@ -1,8 +1,10 @@
-//  GolfDistanceAppApp.swift
+
+//  GolfDistanceApp.swift
 //  GolfDistanceApp
 //
 //  Created by Conor Griffiths on 18/01/2025.
 //
+
 import SwiftUI
 import MetaWearablesSDK
 
@@ -12,9 +14,9 @@ struct GolfDistanceApp: App {
     @State private var deviceManager = MWSDKDeviceManager.sharedInstance()
 
     init() {
-      deviceManager.setKeychainAccessGroup("8Y9CW4W2BY.conlewgri.GolfDistanceApp")
-      deviceManager.add(impl)
-      deviceManager.start()
+        deviceManager.setKeychainAccessGroup("BY9CW4W2BY.conlewgri.GolfDistanceApp")
+        deviceManager.add(GolfDeviceManager.sharedInstance)  // ✅ Pass correct instance
+        deviceManager.start()
     }
     
     var body: some Scene {
