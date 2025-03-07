@@ -417,7 +417,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GolfDistanceApp/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8Y9CW4W2BY;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C7YZYD67YM;
 				"DEVELOPMENT_TEAM[sdk=xros*]" = 8Y9CW4W2BY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -442,7 +442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = conlewgri.GolfDistanceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Conor's Wildcard Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Conor Apps";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=xros*]" = "Conor's Wildcard Profile";
 				REGISTER_APP_GROUPS = NO;
 				SDKROOT = auto;
@@ -465,7 +465,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GolfDistanceApp/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8Y9CW4W2BY;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C7YZYD67YM;
 				"DEVELOPMENT_TEAM[sdk=xros*]" = 8Y9CW4W2BY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -490,7 +490,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = conlewgri.GolfDistanceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Conor's Wildcard Profile";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Conor Apps";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=xros*]" = "Conor's Wildcard Profile";
 				REGISTER_APP_GROUPS = NO;
 				SDKROOT = auto;

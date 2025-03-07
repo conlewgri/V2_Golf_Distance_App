@@ -8,6 +8,8 @@
 import Foundation
 
 class PantryManager {
+    static let sharedInstance = PantryManager()
+    
     private let pantryURL = "https://getpantry.cloud/apiv1/pantry/c740f18f-e27d-4c8e-ba62-60625bdda031/basket/golf_distance"
 
     func sendGolfData(golfDistances: [String]) {
@@ -20,9 +22,14 @@ class PantryManager {
 
         let clubsMap = clubs.map { $0.name + ": " + String($0.distance) }
         
+        let golfInfo = GolfInfoData()
+        
         let golfData: [String: Any] = [
             "golfDistances": golfDistances.joined(separator: ", "),
             "clubDistances": clubsMap.joined(separator: ", "),
+            "golfInfo": golfInfo.getGolfInfo(),
+            "windspeed": String(WeatherManager.sharedInstance.windSpeed ?? 0.0),
+            "winddir": String(WeatherManager.sharedInstance.windDirection ?? 0.0),
             "timestamp": ISO8601DateFormatter().string(from: Date())
         ]
 

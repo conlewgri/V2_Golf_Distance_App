@@ -152,6 +152,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     // Function to calculate distances to all 54 points
     func calculateDistances() {
         guard let userLoc = userLocation else { return }
+        WeatherManager.sharedInstance.fetchWeather(for: userLoc.coordinate)
         calculateDistances(userLocation: userLoc.coordinate)
     }
 
@@ -178,9 +179,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 )
             }
         }
+        PantryManager.sharedInstance.sendGolfData(golfDistances: allDistances)
 
-        let pantryManager = PantryManager()
-        pantryManager.sendGolfData(golfDistances: allDistances)
     }
 
     // Function to update a hole's coordinates

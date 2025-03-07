@@ -9,6 +9,8 @@ import Foundation
 import CoreLocation
 
 class WeatherManager: ObservableObject {
+    static let sharedInstance = WeatherManager()
+    
     @Published var windSpeed: Double?  // Wind speed in meters/second
     @Published var windDirection: Double?  // Wind direction in degrees
     
