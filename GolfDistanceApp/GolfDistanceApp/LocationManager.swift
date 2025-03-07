@@ -179,7 +179,11 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 )
             }
         }
-        PantryManager.sharedInstance.sendGolfData(golfDistances: allDistances)
+
+        //Really we should async wait for weather to finish, but this is a hackathon!
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            PantryManager.sharedInstance.sendGolfData(golfDistances: allDistances)
+        }
 
     }
 
