@@ -7,11 +7,16 @@
 
 import SwiftUI
 import MapKit
+import MetaWearablesSDK
 
 struct ContentView: View {
     @StateObject var locationManager = LocationManager.sharedInstance
     @State private var showGolfCourseView = false
     @State private var showClubDistanceView = false
+    
+    @State private var showConnectionAlert = false
+    @State private var url: URL?
+    @State private var deviceManager = MWSDKDeviceManager.sharedInstance()
     
     var body: some View {
         NavigationView {
@@ -54,7 +59,48 @@ struct ContentView: View {
                 .frame(height: 300)
                 .cornerRadius(10)
                 .padding()
-                
+                .onOpenURL(perform: { url in
+                    self.url = url
+                    self.showConnectionAlert = true
+                  })
+                  .alert(Text("Connect to Glasses"), isPresented: $showConnectionAlert, presenting: url
+                  ) { details in
+                    Button {
+                        if let url {
+                            deviceManager.handleRegistrationIntent(from: url, success: { action, continueCallback in
+                                switch action {
+                                case .startRegistration:
+                                    continueCallback?(true, { error in
+                                        if let error {
+                                            NSLog("Error when handling start registration intent : \(error)")
+                                        }
+                                    })
+                                case .deleteRegistration:
+                                    continueCallback?(true, { error in
+                                        if let error {
+                                            NSLog("Error when handling delete registration intent : \(error)")
+                                        }
+                                    })
+                                @unknown default:
+                                    NSLog("Error when handling registration intent")
+                                }
+                            }, failure: { error in
+                                NSLog("Failed to handle registration intent")
+                            })
+                            showConnectionAlert = false
+                        }
+                      } label: {
+                        Text("Link Device")
+                      }
+                      Button(role: .cancel) {
+                        showConnectionAlert = false
+                      } label: {
+                        Text("Cancel")
+                      }
+                    } message: { details in
+                      Text("Do you want to securely connect your app to your glasses?")
+                    }
+                      
                 Spacer()
             }
         }
